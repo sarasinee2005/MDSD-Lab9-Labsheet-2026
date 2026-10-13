@@ -173,6 +173,23 @@ Future<void> main() async {
 ```text
 บันทึกรูปผลลัพธ์ที่นี่ และคำอธิบายของแต่ละกรณี
 ```
+กรณีสมัครสมาชิกสำเร็จ
+
+<img width="387" height="922" alt="image" src="https://github.com/user-attachments/assets/5d80c17b-7696-4165-83cf-761002a78b2e" />
+
+<img width="1411" height="800" alt="image" src="https://github.com/user-attachments/assets/b75e5fcd-4529-41c6-a2e2-356e7b0cdf79" />
+
+กรณีใช้เมลเดิมซ้ำ
+
+<img width="393" height="907" alt="image" src="https://github.com/user-attachments/assets/9762bf61-0835-495e-b4b2-ad5659e3a751" />
+
+กรณีรหัสผ่านสั้นหรือเดาง่ายเกินไป
+
+<img width="387" height="900" alt="image" src="https://github.com/user-attachments/assets/63144225-c22c-4ffd-a561-fa8e3538cb3b" />
+
+
+
+
 
 ---
 
