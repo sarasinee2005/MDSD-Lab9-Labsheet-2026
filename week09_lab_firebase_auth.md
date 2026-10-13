@@ -877,9 +877,29 @@ service cloud.firestore {
 
 > ✅ **Checkpoint 8.1** ถ่ายภาพหน้าจอผลการทดสอบทั้ง 4 ข้อ 
 
-```text
-บันทึกรูปผลลัพธ์ที่นี่ 
-```
+1. ล็อกอินค้างไว้ แล้วปิดแอปทิ้งไปทั้งหมด (ไม่ใช่แค่ย่อ) จากนั้นเปิดแอปใหม่อีกครั้ง — ควรเข้าหน้า `MainScaffold` ทันทีโดยไม่ต้องล็อกอินซ้ำ (Firebase Auth จำสถานะล็อกอินไว้ให้อัตโนมัติ)
+
+ภาพปิดแอพทิ้ง
+
+<img width="433" height="1016" alt="image" src="https://github.com/user-attachments/assets/569aa3a6-4094-4e95-a60a-702fb6c220e3" />
+
+เปิดแอพกลับมาอีกครั้ง
+
+<img width="457" height="1015" alt="image" src="https://github.com/user-attachments/assets/569e97e2-97de-4f35-9e97-07d6cbb70bda" />
+
+2. ปิด WiFi/Data ของเครื่องให้หมด แล้วลองเปิดแท็บ "รายการโปรด" และ "ร่างของฉัน" — ควรยังใช้งานได้ปกติเพราะเก็บอยู่ใน Local Database (Drift) ไม่ต้องพึ่งเครือข่าย
+หน้าหลักหลังจากปิดเน็ต
+<img width="451" height="1015" alt="image" src="https://github.com/user-attachments/assets/0b74d671-5170-49af-8f93-22098e3f939e" />
+
+หน้าร่างสินค้า
+
+<img width="456" height="713" alt="image" src="https://github.com/user-attachments/assets/605815ec-dc89-4753-9f2e-b0e1dd893719" />
+
+หน้ารายการโปรด
+
+<img width="436" height="1021" alt="image" src="https://github.com/user-attachments/assets/91e96096-0851-4786-8144-e92bcf8a8eb2" />
+
+3. ขณะยังปิดเครือข่ายอยู่ ลองกด "โพสต์ขายจริง" กับร่างสักชิ้น — ควรเกิด Error เพราะ Firestore/Storage ต้องการเครือข่ายเสมอ (ต่างจาก Local Database) ตรวจสอบว่าแอปแสดงข้อความ Error ที่เข้าใจได้ ไม่ Crash
 
 ---
 
