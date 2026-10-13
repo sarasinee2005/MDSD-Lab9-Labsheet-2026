@@ -193,6 +193,8 @@ case 'weak-password':
   return 'รหัสผ่านคาดเดาง่ายเกินไป (ต้องมีอย่างน้อย 6 ตัวอักษร)';
 การทำงาน: บล็อก case 'weak-password' จะจับรหัสนี้แล้วคืนค่าข้อความภาษาไทยแจ้งเตือนผู้ใช้ว่า 'รหัสผ่านคาดเดาง่ายเกินไป (ต้องมีอย่างน้อย 6 ตัวอักษร)' เพื่อให้ผู้ใช้ทราบเงื่อนไขความยาวขั้นต่ำ
 ```
+ภาพผลลัพธ์
+
 กรณีสมัครสมาชิกสำเร็จ
 
 <img width="387" height="922" alt="image" src="https://github.com/user-attachments/assets/5d80c17b-7696-4165-83cf-761002a78b2e" />
@@ -450,6 +452,7 @@ final credential = GoogleAuthProvider.credential(
 );
 จากนั้นส่งต่อไปให้ Firebase ผ่านคำสั่ง FirebaseAuth.instance.signInWithCredential(credential) เพื่อให้ Firebase ทำการตรวจสอบความถูกต้อง ออก Firebase Token สำหรับเซสชันในแอป และลงทะเบียนบัญชีผู้ใช้ลงในระบบ Firebase Authentication ภายใต้ Provider google.com สำเร็จ
 ```
+ภาพผลลัพธ์
 
 <img width="442" height="1007" alt="image" src="https://github.com/user-attachments/assets/4ffdf131-614f-4d9d-a682-76435226f879" />
 
@@ -594,8 +597,35 @@ Widget build(BuildContext context) {
 
 
 ```text
-บันทึกรูปผลลัพธ์ที่นี่ (3 ภาพ) และคำอธิบาย
+1. การทำงานของ authStateChanges()
+FirebaseAuth.instance.authStateChanges() เป็น Stream ที่คอยส่งสถานะผู้ใช้แบบเรียลไทม์ เมื่อเข้าสู่ระบบสำเร็จ Stream จะส่งอ็อบเจกต์ User ออกมา และเมื่อกดออกจากระบบผ่าน signOut() Stream จะส่งค่า null ออกมาทันที
+
+2. การอัปเดตหน้าจอของ StreamBuilder
+StreamBuilder ดักฟัง Stream ดังกล่าวตลอดเวลา เมื่อมีข้อมูลใหม่เข้ามา วิดเจ็ตจะเรียกฟังก์ชัน builder เพื่อสร้างหน้าจอใหม่ทันที
+
+- ถ้าข้อมูลที่ได้เป็น null จะแสดงหน้า LoginPage
+
+- ถ้าข้อมูลที่ได้มี User จะแสดงหน้า MainScaffold
+
+3. การจัดการหน้าจอแบบ Declarative UI
+การทำงานรูปแบบนี้อิงตามสถานะของข้อมูล (State) โดยตรง ทำให้หน้าจอเปลี่ยนไปตามข้อมูลที่ Firebase ส่งมาโดยอัตโนมัติ จึงไม่ต้องเขียนคำสั่งสลับหน้าเอง เช่น Navigator.push() หรือ Navigator.pop() ช่วยลดโอกาสเกิดข้อผิดพลาดในการจัดการ Route และไม่ต้องคอยเช็กเงื่อนไขเพื่อสั่งเปิดหน้าจอด้วยตนเอง
 ```
+ภาพผลลัพธ์
+
+1. หน้าล็อกอิน
+
+<img width="456" height="1023" alt="image" src="https://github.com/user-attachments/assets/535816df-f31f-4fe1-a9db-a7c2e22557b2" />
+
+2. หน้าหลังจากล็อกอินสำเร็จ
+
+<img width="452" height="1022" alt="image" src="https://github.com/user-attachments/assets/ab6795d0-59c6-4233-8c00-4787c70ece2f" />
+
+3. หน้าหลังจากล็อกเอ้าท์
+
+<img width="446" height="1016" alt="image" src="https://github.com/user-attachments/assets/fe61ca35-150c-4b7e-a5d6-cd917966a57d" />
+
+
+
 
 ---
 
