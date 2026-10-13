@@ -728,6 +728,10 @@ HomePage รู้จักแค่ Interface ItemRepository ทำให้เ
 3. รองรับการรวมข้อมูลได้สะดวก (Polymorphism)
 HomePage สามารถรับ List มาวนลูปเรียกคำสั่ง getItems() ผ่าน Future.wait() ได้เหมือนกันทุกตัว ทำให้รวมข้อมูลจากหลายแหล่งเข้าด้วยกันได้ทันทีโดยที่ UI ไม่ต้องรู้ที่มาของข้อมูล
 ```
+ภาพผลลัพธ์
+
+<img width="453" height="1015" alt="image" src="https://github.com/user-attachments/assets/aabcb687-289e-49a0-bb2e-434773a8d462" />
+
 
 ---
 
@@ -780,6 +784,16 @@ HomePage สามารถรับ List มาวนลูปเรียก�
 ```text
 บันทึกรูปผลลัพธ์ที่นี่
 ```
+
+ภาพข้อมูลรายละเอียดสินค้าที่โพสต์จริง
+
+<img width="1472" height="900" alt="image" src="https://github.com/user-attachments/assets/a0d6f09c-40b1-435b-9d22-5f94d8b8e31e" />
+
+ภาพหน้าแบบร่างที่หายไปแล้ว
+
+<img width="451" height="997" alt="image" src="https://github.com/user-attachments/assets/2906d2ea-3dd1-491e-ad90-a3b1537c5a62" />
+
+
 
 > ✅ **Checkpoint 6.2** ถ่ายภาพหน้าจอ Firebase Console เมนู Storage ที่แสดงไฟล์รูปภาพที่อัปโหลดสำเร็จ และภาพหน้าจอ Firestore ที่แสดงว่าเอกสารมี field `imageUrl` เป็น URL จริงที่เปิดดูได้ ถ่ายภาพหน้าจอแอปที่แสดงรูปสินค้านั้นบนหน้า Home ผ่าน `Image.network(imageUrl)` ด้วย (ย้อนกลับไปถ่ายภาพ Checkpoint 5.1 ให้ครบตอนนี้ ถ้ายังไม่ได้ทำ)
 
