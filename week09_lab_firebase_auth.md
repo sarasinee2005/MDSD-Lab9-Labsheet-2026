@@ -40,6 +40,12 @@
 บันทึกรูปผลลัพธ์ที่นี่
 ```
 
+<img width="1572" height="823" alt="image" src="https://github.com/user-attachments/assets/180cab4d-96d9-480e-abfa-3161ca988dc9" />
+
+<img width="1912" height="926" alt="image" src="https://github.com/user-attachments/assets/f75b98c8-a95b-4095-831f-bf2193d99080" />
+
+
+
 ### ขั้นตอนที่ 1.2: 🔧 ทำตามขั้นตอน — ติดตั้งเครื่องมือและเชื่อมโปรเจกต์ด้วย FlutterFire CLI
 
 ติดตั้งเครื่องมือที่จำเป็น (ทำครั้งเดียวต่อเครื่อง)
