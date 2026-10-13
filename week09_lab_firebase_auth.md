@@ -730,7 +730,8 @@ HomePage สามารถรับ List มาวนลูปเรียก�
 ```
 ภาพผลลัพธ์
 
-<img width="453" height="1015" alt="image" src="https://github.com/user-attachments/assets/aabcb687-289e-49a0-bb2e-434773a8d462" />
+<img width="451" height="997" alt="image" src="https://github.com/user-attachments/assets/d46bfad9-faed-44ee-9438-078f29aac1e9" />
+
 
 
 ---
@@ -787,7 +788,11 @@ HomePage สามารถรับ List มาวนลูปเรียก�
 
 ภาพข้อมูลรายละเอียดสินค้าที่โพสต์จริง
 
-<img width="1472" height="900" alt="image" src="https://github.com/user-attachments/assets/a0d6f09c-40b1-435b-9d22-5f94d8b8e31e" />
+<img width="1442" height="648" alt="image" src="https://github.com/user-attachments/assets/459054ca-befe-45ad-82cf-85a8684477f1" />
+
+<img width="1490" height="907" alt="image" src="https://github.com/user-attachments/assets/2439655b-d4a4-4818-b98f-b52e7acfeed3" />
+
+
 
 ภาพหน้าแบบร่างที่หายไปแล้ว
 
@@ -800,6 +805,15 @@ HomePage สามารถรับ List มาวนลูปเรียก�
 ```text
 บันทึกรูปผลลัพธ์ที่นี่
 ```
+<img width="1055" height="465" alt="image" src="https://github.com/user-attachments/assets/e74de1d9-5fc6-4198-be50-9b843be54321" />
+
+<img width="381" height="106" alt="image" src="https://github.com/user-attachments/assets/eebe1d4d-305c-49a5-ac10-b02c0f53b31b" />
+
+<img width="1062" height="506" alt="image" src="https://github.com/user-attachments/assets/8d1632e6-81bb-4714-a7bf-cc2bd4503bdf" />
+
+<img width="456" height="183" alt="image" src="https://github.com/user-attachments/assets/e73f73d7-3233-403f-b996-271c4a67a267" />
+
+
 
 ---
 
