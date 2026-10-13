@@ -427,8 +427,35 @@ avdmanager list avd
 > ✅ **Checkpoint 3.1** ทดสอบกดปุ่มเข้าสู่ระบบด้วย Google ด้วยบัญชี Google จริงของคุณ ถ่ายภาพหน้าจอตอนเลือกบัญชี Google และภาพหน้าจอ Firebase Console ที่แสดงว่ามีผู้ใช้ใหม่ Provider เป็น Google เพิ่มเข้ามา อธิบายว่า `idToken` กับ `accessToken` ที่ได้จาก Google นำไปใช้ทำอะไรต่อในขั้นตอนการยืนยันตัวตนกับ Firebase (อ้างอิงหัวข้อ 9.4)
 
 ```text
-บันทึกรูปผลลัพธ์ที่นี่ และคำอธิบาย
+1.idToken (Identity Token):
+
+เป็น JSON Web Token (JWT) ที่ออกและลงลายมือชื่อดิจิทัลรับรองโดย Google เซิร์ฟเวอร์ ภายในบรรจุข้อมูลยืนยันตัวตนของผู้ใช้ (User Identity) เช่น User ID, อีเมล, ชื่อ และรูปโปรไฟล์
+
+การนำไปใช้: ถูกส่งไปยัง Firebase เพื่อเป็นหลักฐานยืนยันความถูกต้องว่าผู้ใช้ได้ผ่านการตรวจสอบสิทธิ์และเป็นเจ้าของบัญชี Google นั้นจริง
+
+2.accessToken (Access Token):
+
+เป็น OAuth 2.0 Token ที่ใช้สำหรับยืนยันสิทธิ์การเข้าถึงข้อมูลตามขอบเขต (Scopes) ที่ระบุไว้ เช่น การขอเข้าถึงข้อมูลอีเมล (scopes: ['email'])
+
+การนำไปใช้: ใช้ยืนยันการอนุญาตสิทธิ์ของ Client App ในการดึงหรือเข้าถึงทรัพยากรที่เกี่ยวข้องกับ Google APIs
+
+3.ขั้นตอนการเชื่อมต่อกับ Firebase:
+
+นำค่าทั้งสองมารวมกันเพื่อสร้างเป็นกุญแจยืนยันตัวตน (AuthCredential) ด้วยคำสั่ง:
+
+Dart
+final credential = GoogleAuthProvider.credential(
+  idToken: idToken,
+  accessToken: authorization?.accessToken,
+);
+จากนั้นส่งต่อไปให้ Firebase ผ่านคำสั่ง FirebaseAuth.instance.signInWithCredential(credential) เพื่อให้ Firebase ทำการตรวจสอบความถูกต้อง ออก Firebase Token สำหรับเซสชันในแอป และลงทะเบียนบัญชีผู้ใช้ลงในระบบ Firebase Authentication ภายใต้ Provider google.com สำเร็จ
 ```
+
+<img width="442" height="1007" alt="image" src="https://github.com/user-attachments/assets/4ffdf131-614f-4d9d-a682-76435226f879" />
+
+<img width="1478" height="882" alt="image" src="https://github.com/user-attachments/assets/9a366c8f-77bf-4a70-906f-b6f1602d94c3" />
+
+
 
 ---
 
