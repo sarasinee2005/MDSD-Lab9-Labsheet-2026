@@ -905,7 +905,8 @@ service cloud.firestore {
 
 4. เปิดเครือข่ายกลับมา แล้วลองกด "โพสต์ขายจริง" รายการเดิมอีกครั้ง — ควรสำเร็จตามปกติ
    
-<img width="457" height="150" alt="image" src="https://github.com/user-attachments/assets/43a82734-4c6e-4e50-81b6-73da14d50e1f" />
+<img width="447" height="227" alt="image" src="https://github.com/user-attachments/assets/f817fcdf-f7cf-4954-8ba9-cd2f0819be7e" />
+
 
 ---
 
