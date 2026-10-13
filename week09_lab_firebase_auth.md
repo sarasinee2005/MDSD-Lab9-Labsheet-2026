@@ -901,6 +901,12 @@ service cloud.firestore {
 
 3. ขณะยังปิดเครือข่ายอยู่ ลองกด "โพสต์ขายจริง" กับร่างสักชิ้น — ควรเกิด Error เพราะ Firestore/Storage ต้องการเครือข่ายเสมอ (ต่างจาก Local Database) ตรวจสอบว่าแอปแสดงข้อความ Error ที่เข้าใจได้ ไม่ Crash
 
+<img width="443" height="1018" alt="image" src="https://github.com/user-attachments/assets/9fa59174-6ff7-4957-ad6d-afa6b85581e1" />
+
+4. เปิดเครือข่ายกลับมา แล้วลองกด "โพสต์ขายจริง" รายการเดิมอีกครั้ง — ควรสำเร็จตามปกติ
+   
+<img width="457" height="150" alt="image" src="https://github.com/user-attachments/assets/43a82734-4c6e-4e50-81b6-73da14d50e1f" />
+
 ---
 
 ## ปัญหาที่พบบ่อยและวิธีแก้ไข (Troubleshooting)
