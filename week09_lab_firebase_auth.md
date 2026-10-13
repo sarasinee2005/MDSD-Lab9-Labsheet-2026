@@ -636,10 +636,17 @@ StreamBuilder ดักฟัง Stream ดังกล่าวตลอดเ�
 ก่อนเขียนโค้ด ให้ตอบคำถามต่อไปนี้ (อ้างอิง `campus_marketplace_lab_roadmap.md` ข้อ 5.6 และเนื้อหาหัวข้อ 9.5):
 
 1. ทำไมเราจึง "เพิ่ม Implementation ใหม่" (`ItemRepositoryFirestore`) แทนที่จะแก้ไข `ItemRepositoryApi` เดิม หรือเขียนโค้ดเรียก Firestore ตรงจาก `HomePage`?
+
+```text
+ทำตามหลัก Open/Closed Principle: เป็นการเพิ่มการทำงานใหม่โดยไม่ไปแตะต้องโค้ดเดิมที่ใช้งานได้อยู่แล้ว ช่วยให้ ItemRepositoryApi ยังคงทำงานได้ตามปกติ และสามารถเลือกสลับใช้งานหรือใช้ร่วมกันทั้งสองแหล่งข้อมูลได้
+ลดการผูกติดของโค้ด (Loose Coupling): หน้า HomePage มีหน้าที่แค่วาด UI ไม่ควรรับรู้ว่าข้อมูลมาจาก Firestore, REST API หรือ Local Database หากเขียนโค้ดเรียก Firestore ใน HomePage ตรงๆ จะทำให้แก้โค้ดยาก และเขียน Unit Test จำลองข้อมูลได้ลำบาก
+```
+
 2. ถ้าในอนาคตอาจารย์สั่งให้เปลี่ยนจาก Fake Store API ไปใช้ API อื่น ต้องแก้ไฟล์กี่ไฟล์ ถ้าทุก Widget เรียกผ่าน Interface `ItemRepository` เท่านั้น?
 
 ```text
-บันทึกคำตอบของคุณที่นี่
+1.ไฟล์ Repository ของ API (เช่น item_repository_api.dart): แก้ URL endpoint และ logic การแปลง JSON ของ API ตัวใหม่
+2.ไฟล์ main.dart: เปลี่ยนจุดสร้างและส่ง object Repository เข้าสู่ระบบ
 ```
 
 ### ขั้นตอนที่ 5.2: **นักศึกษาเขียน Code เอง** — ItemRepositoryFirestore
